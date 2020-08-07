@@ -542,8 +542,7 @@ exports.initialize = (modPath) => {
 
     //Localizor and Load
     exports.onLoadGame = settings => {
-        GetRootScope().showMessage("CJ5Boss", "You have also initialized with the Boss Beginner Extensions mod by STEAM NAME: CJ5Boss.");
-
+        
         $rootScope = GetRootScope();
         if($rootScope.options.language === "en"){
             //Developer
@@ -560,7 +559,7 @@ exports.initialize = (modPath) => {
             Language['colorpalette'] = "Color Paltte"; //Graphics Done
             Language['aestheticasset'] = "Aesthetic Asset"; //Graphics Done
             //SysAdmin
-            Langauge['verificationcomponent'] = "Verification Component"; //Graphics Done
+            Language['verificationcomponent'] = "Verification Component"; //Graphics Done
             Language['authcomponent'] = "Auth Component"; //Graphics Done
             //Lead Developer
             Language['beginnerdevmodule'] = "Beginner Dev Module"; //Graphics Done
