@@ -400,35 +400,175 @@ exports.initialize = (modPath) => {
     }
 
     //Updated feature recipes
+    Object.assign(Features.find(feature => feature.name == FeatureNames.LandingPage).requirements,
+        {
+            "UiComponent": 1,
+            "BackendComponent": 1,
+            "BlueprintComponent": 1,
+            "GraphicsComponent": 1,
+            "aestheticscomponent": 1,
+            "scriptingapi": 1,
+            "basicfeatureupgrader": 1
+        }
+    )
+    Object.assign(Features.find(feature => feature.name == FeatureNames.LiveStreaming).requirements,
+        {
+            "BackendModule": 1,
+            "FrontendModule": 1,
+            "NetworkComponent": 1,
+            "presentationmodule": 1,
+            "featureupgrader": 1,
+            "featurefinalizer": 1
+        }
+    )
+    Object.assign(Features.find(feature => feature.name == FeatureNames.SharingFunctionality).requirements,
+        {
+            "BackendModule": 1,
+            "FrontendModule": 1,
+            "InputModule": 1,
+            "EmailModule": 1,
+            "UiSet": 1,
+            "condensedfeatures": 1,
+            "crossovermodule": 1,
+            "featureupgrader": 1,
+            "featurefinalizer": 1
+        }
+    )
+    Object.assign(Features.find(feature => feature.name == FeatureNames.OfflineContent).requirements,
+        {
+            "BackendModule": 2,
+            "FrontendModule": 1,
+            "StorageModule": 2,
+            "DatabaseLayer": 2,
+            "UiSet": 1,
+            "condensedfeatures": 1,
+            "programmodule": 1,
+            "featureupgrader": 1,
+            "featurefinalizer": 1
+        }
+    )
+    Object.assign(Features.find(feature => feature.name == FeatureNames.PaymentSystem).requirements,
+        {
+            "DatabaseLayer": 2,
+            "FrontendModule": 1,
+            "PaymentGatewayModule": 1,
+            "EmailModule": 1,
+            "DesignGuidelines": 1,
+            "condensedfeatures": 1,
+            "beginnerdevmodule": 1,
+            "featureupgrader": 1,
+            "featurefinalizer": 1
+        }
+    )
+    Object.assign(Features.find(feature => feature.name == FeatureNames.ChatSystem).requirements,
+        {
+            "DatabaseLayer": 1,
+            "InputModule": 1,
+            "NotificationModule": 2,
+            "NetworkComponent": 3,
+            "ApiClientModule": 2,
+            "DesignGuidelines": 1,
+            "condensedfeatures": 1,
+            "crossovermodule": 1,
+            "featureupgrader": 1,
+            "featurefinalizer": 1
+        }
+    )
+    Object.assign(Features.find(feature => feature.name == FeatureNames.HelpSystem).requirements,
+        {
+            "ContentManagementModule": 4,
+            "InputModule": 4,
+            "FrontendModule": 3,
+            "BackendModule": 3,
+            "UiSet": 2,
+            "DesignGuidelines": 1,
+            "condensedfeatures": 1,
+            "basicalgorithm": 1,
+            "featureupgrader": 1,
+            "featurefinalizer": 1
+        }
+    )
+    Object.assign(Features.find(feature => feature.name == FeatureNames.VideoFunctionality).requirements,
+        {
+            "FrontendModule": 1,
+            "VideoPlaybackModule": 1,
+            "designapi": 1,
+            "featureupgrader": 1
+        }
+    )
+    Object.assign(Features.find(feature => feature.name == FeatureNames.ItemListing).requirements,
+        {
+            "BackendModule": 1,
+            "FrontendModule": 1,
+            "ContentManagementModule": 1,
+            "scriptingapi": 1,
+            "featureupgrader": 1
+        }
+    )
+    Object.assign(Features.find(feature => feature.name == FeatureNames.CommentFunctionality).requirements,
+        {
+            "BackendModule": 3,
+            "InputModule": 3,
+            "basicalgorithm": 2,
+            "featureupgrader": 1
+        }
+    )
+    Object.assign(Features.find(feature => feature.name == FeatureNames.ImageUpload).requirements,
+        {
+            "InputModule": 1,
+            "StorageModule": 1,
+            "DatabaseLayer": 2,
+            "FrontendModule": 1,
+            "UiSet": 1,
+            "condensedfeatures": 1,
+            "crossovermodule": 1,
+            "featureupgrader": 1,
+            "featurefinalizer": 1
+        }
+    )
+    Object.assign(Features.find(feature => feature.name == FeatureNames.VideoEditor).requirements,
+        {
+            "VideoPlaybackModule": 1,
+            "StorageModule": 1,
+            "FrontendModule": 1,
+            "BackendModule": 1,
+            "UiSet": 1,
+            "condensedfeatures": 1,
+            "crossovermodule": 1,
+            "beginnerdesignermodule": 1,
+            "featureupgrader": 1,
+            "featurefinalizer": 1
+        }
+    )
 
     //Localizor and Load
     exports.onLoadGame = settings => {
-        GetRootScope().showMessage("CJ5Boss", "You have also initialized with the Boss Beginner Extensions mod.");
+        GetRootScope().showMessage("CJ5Boss", "You have also initialized with the Boss Beginner Extensions mod by STEAM NAME: CJ5Boss.");
 
         $rootScope = GetRootScope();
         if($rootScope.options.language === "en"){
             //Developer
-            Language['newdatatypes'] = "New Data Types";
-            Language['programmingmath'] = "Programming Math";
-            Language['basicalgorithm'] = "Basic Algorithm";
-            Language['serversideprocess'] = "Server Side Process";
-            Language['scriptingapi'] = "Scripting API";
-            Language['filemanager'] = "File Manager";
+            Language['newdatatypes'] = "New Data Types"; //Graphics Done
+            Language['programmingmath'] = "Programming Math"; //Graphics Done
+            Language['basicalgorithm'] = "Basic Algorithm"; //Graphics Done
+            Language['serversideprocess'] = "Server Side Process"; //Graphics Done
+            Language['scriptingapi'] = "Scripting API"; //Graphics Donee
+            Language['filemanager'] = "File Manager"; //Graphics Done
             //Designer
-            Language['csspack'] = "CSS Pack";
-            Language['developerintegration'] = "Developer Integration";
-            Language['designapi'] = "Design API";
-            Language['colorpalette'] = "Color Palette";
-            Language['aestheticasset'] = "Aesthetic Asset";
+            Language['csspack'] = "CSS Pack"; //Graphics Done
+            Language['developerintegration'] = "Developer Integration"; //Graphics Done
+            Language['designapi'] = "Design API"; //Graphics Done
+            Language['colorpalette'] = "Color Paltte"; //Graphics Done
+            Language['aestheticasset'] = "Aesthetic Asset"; //Graphics Done
             //SysAdmin
-            Langauge['verificationcomponent'] = "Verification Component";
-            Language['authcomponent'] = "Auth Component";
+            Langauge['verificationcomponent'] = "Verification Component"; //Graphics Done
+            Language['authcomponent'] = "Auth Component"; //Graphics Done
             //Lead Developer
-            Language['beginnerdevmodule'] = "Beginner Dev Module";
-            Language['beginnerdesignermodule'] = "Beginner Designer Module";
-            Language['programmodule'] = "Program Module";
-            Language['presentationmodule'] = "Presentation Module";
-            Language['crossovermodule'] = "Crossover Module";
+            Language['beginnerdevmodule'] = "Beginner Dev Module"; //Graphics Done
+            Language['beginnerdesignermodule'] = "Beginner Designer Module"; //Graphics Done
+            Language['programmodule'] = "Program Module"; //Graphics Done
+            Language['presentationmodule'] = "Presentation Module"; //Graphics Done
+            Language['crossovermodule'] = "Crossover Module"; //Graphics Done
         }
     }
 }
