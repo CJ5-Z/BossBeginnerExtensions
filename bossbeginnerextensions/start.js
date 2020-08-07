@@ -62,7 +62,7 @@ exports.initialize = (modPath) => {
         //Designer
     ComponentNames.CSSPack = 'csspack';
     Components.push({
-        name: ComponentNames.FrameworkModule,
+        name: ComponentNames.CSSPack,
         employeeLevel: Enums.EmployeeLevels.Beginner,
         icon: modPath + 'graphics/designer/csspack.png',
         employeeTypeName:Enums.EmployeeTypeNames.Designer,
@@ -173,7 +173,6 @@ exports.initialize = (modPath) => {
             'GraphicsComponent': 1,
             'csscomponent': 1,
             'aestheticscomponent': 1,
-            'csspack': 1,
             'csspack': 1,
             'colorpalette': 1,
             'aestheticasset': 1
